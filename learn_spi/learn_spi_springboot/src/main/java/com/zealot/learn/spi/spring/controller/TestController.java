@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.zealot.learn.spi.spring.service.ZhmLogService;
 import com.zealot.learn.spi.spring.service.ZhmSearchService;
+import com.zealot.learn.spi.spring.service.ZhmSimpleService;
 
 
 @Controller
@@ -21,6 +22,9 @@ public class TestController extends BaseController{
 	
 	@Autowired
 	private ZhmSearchService zhmSearchService;
+	
+	@Autowired
+	private ZhmSimpleService zhmSimpleService;
 
 	@RequestMapping(value = "/list")
 	@ResponseBody
@@ -35,6 +39,14 @@ public class TestController extends BaseController{
 	public String search(HttpServletRequest req, Model model){
 
 		zhmSearchService.search("zhm");
-		return "111";
+		return "222";
+	}
+	
+	@RequestMapping(value = "/simple")
+	@ResponseBody
+	public String simple(HttpServletRequest req, Model model){
+
+		String name = zhmSimpleService.getName(123);
+		return name;
 	}
 }
