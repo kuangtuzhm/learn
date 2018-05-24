@@ -13,7 +13,7 @@ public class DBSearch implements Search {
 	
 	@Override
 	public List<String> search(String keyword) {
-		logger.info("DBSearch...............");
+		logger.info("DBSearch测试...............");
 		return null;
 	}
 
