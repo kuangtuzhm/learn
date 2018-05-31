@@ -13,7 +13,12 @@ public class SimpleServiceImpl implements SimpleService {
 
 	@Override
 	public String getName(String id) {
-		
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return "这个是一个简单的dubbo测试..........";
 	}
 

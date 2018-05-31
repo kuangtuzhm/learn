@@ -17,5 +17,6 @@
     <module>learn-dubbo-registry-provider</module>
     <module>learn-dubbo-provider-simple</module>
     <module>learn-dubbo-consumer-simple</module>
+    <module>learn-dubbo-filter</module>
   </modules>
 </project>
